@@ -1,0 +1,75 @@
+---
+interface Props {
+  company: string;
+  position: string;
+  location: string;
+  period: string;
+  description: string;
+  achievements?: string[];
+}
+
+const { company, position, location, period, description, achievements } = Astro.props;
+---
+<div class="card experience-card">
+  <div class="job-header">
+    <h3>{company}</h3>
+    <span class="period">{period}</span>
+  </div>
+  <p class="position">{position}</p>
+  <p class="location">{location}</p>
+  <p class="description">{description}</p>
+  {achievements && achievements.length > 0 && (
+    <ul class="achievements">
+      {achievements.map(achievement => (
+        <li>{achievement}</li>
+      ))}
+    </ul>
+  )}
+</div>
+
+<style>
+  .experience-card {
+    border-left: 4px solid var(--primary);
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .period {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+
+  .position {
+    color: var(--primary);
+    font-weight: 600;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .location {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .achievements {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .achievements li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: var(--text);
+  }
+</style>

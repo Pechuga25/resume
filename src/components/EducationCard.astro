@@ -1,0 +1,44 @@
+---
+interface Props {
+  degree: string;
+  institution: string;
+  location: string;
+  gpa?: string;
+  courses?: string[];
+}
+
+const { degree, institution, location, gpa, courses } = Astro.props;
+---
+<div class="card education-card">
+  <h3>{degree}</h3>
+  <p class="institution">{institution} | {location} {gpa && `- GPA: ${gpa}`}</p>
+  {courses && (
+    <div class="courses">
+      <h4>Relevant Coursework:</h4>
+      <p>{courses.join(' | ')}</p>
+    </div>
+  )}
+</div>
+
+<style>
+  .education-card h3 {
+    color: var(--text);
+    margin: 0 0 0.5rem 0;
+  }
+
+  .institution {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+
+  .courses h4 {
+    color: var(--primary);
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .courses p {
+    line-height: 1.6;
+    color: var(--text);
+  }
+</style>

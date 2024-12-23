@@ -1,0 +1,28 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="container">
+    <div class="copyright">
+      <p>&copy; {currentYear} Francisco Vidales. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--background);
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .copyright p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+</style>

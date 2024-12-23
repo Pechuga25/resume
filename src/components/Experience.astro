@@ -1,0 +1,38 @@
+---
+import ExperienceCard from './ExperienceCard.astro';
+---
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="gradient-text">Professional Experience</h2>
+    <div class="timeline">
+      <ExperienceCard
+        company="Morgan Stanley"
+        position="Asset Management - AML Risk Associate (Team Lead)"
+        location="Houston - TX"
+        period="2023 - Present"
+        description="In my current role, I am responsible for executing risk-relevant activities related to AML. Assess Bank Secrecy Act (BSA) compliance. Review money laundering and reputational risk matters identified through the execution of the Firm's EDD protocols for both new and existing customers. Assist in executing key projects and initiatives related to assessing and mitigating the Firm's exposure to money laundering and reputational risk-relevant activities. Partner with the Second Line of Defense Compliance teams to monitor client relationships on an ongoing basis. Collaborate with Global Financial Crimes to ensure the BSA/AML program operates effectively and continues to comply with regulatory requirements and expectations. Partner with the Business Units, including E-Trade, International Wealth Management, Field Strategic Services and WM Risk to ensure appropriate adherence to BSA/AML requirements and Business Unit Risk Tolerance. Set clear team goals / monitor team performance and report on metrics / delegate tasks and set deadlines."
+      />
+      
+      <ExperienceCard
+        company="PNC Bank"
+        position="Private Bank - AML Sanctions Associate"
+        location="Houston - TX"
+        period="2018 - 2023"
+        description="Contribute to onboarding of international customers by leveraging strong knowledge of BSA/AML compliance. Verify, investigate, and audit potential investment opportunity by carrying out customer due diligence procedures in line with AML policies and protocols. Deliver expert-level support in account opening and maintenance processes execution. Counsel officers on all account opening matters by steering efforts as key advisor. Direct entre account opening matters for international customers by coordinating closely with account officers and back-office staff. Ensure adherence to established BSA account opening policies by deploying suitable actions."
+        achievements={[
+          "Managed and completed 50 accounts in a month with accurate information.",
+          "Enabled timely completion of tasks by developing and optimizing process workflows and pipelines.",
+          "Expanded skills of new employees on managing entire account functions by delivering knowledge-rich training."
+        ]}
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+</style>

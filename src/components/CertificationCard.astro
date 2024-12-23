@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  date: string;
+}
+
+const { title, date } = Astro.props;
+---
+<div class="card certification-card">
+  <h4>{title}</h4>
+  <p class="date">{date}</p>
+</div>
+
+<style>
+  .certification-card {
+    padding: 1.5rem;
+  }
+
+  .certification-card h4 {
+    margin: 0;
+    color: var(--text);
+  }
+
+  .date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+  }
+</style>

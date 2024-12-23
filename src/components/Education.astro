@@ -1,0 +1,82 @@
+---
+import EducationCard from './EducationCard.astro';
+import CertificationCard from './CertificationCard.astro';
+
+const courses = [
+  'Business Analytics',
+  'Business Law',
+  'International Marketing',
+  'E-Commerce',
+  'Consumer Behavior',
+  'Market Research',
+  'Accounting',
+  'Financial Management',
+  'Budgeting',
+  'Forecasting',
+  'Financial Engineering',
+  'Microeconomics',
+  'Macroeconomics',
+  'Banking',
+  'Risk Management',
+  'Leadership Development'
+];
+---
+<section id="education" class="section">
+  <div class="container">
+    <h2 class="gradient-text">Education & Certifications</h2>
+    <EducationCard
+      degree="Bachelor's Degree in Business Administration"
+      institution="Georgia Gwinnett College"
+      location="Lawrenceville, GA"
+      gpa="3.67/4"
+      courses={courses}
+    />
+    
+    <div class="certifications-grid">
+      <CertificationCard
+        title="Financial Engineering and Risk Management Course"
+        date="February 2018"
+      />
+      <CertificationCard
+        title="Certificate of Leadership – Georgia Gwinnett College"
+        date="September 2015"
+      />
+    </div>
+
+    <div class="card skills-card">
+      <h3>Technical Proficiencies & Language Skills</h3>
+      <ul>
+        <li>Proficient in Microsoft Excel, Word, and Power Point</li>
+        <li>Fluent in Spanish (Native) & English</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .skills-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+  }
+
+  .skills-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .skills-card li::before {
+    content: '•';
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+  }
+</style>

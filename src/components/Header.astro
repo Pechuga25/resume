@@ -1,0 +1,134 @@
+---
+---
+<header class="nav-header">
+  <nav class="navbar">
+    <a href="#" class="logo">FV</a>
+    <div class="nav-links">
+      <a href="#about" class="nav-item">About</a>
+      <a href="#expertise" class="nav-item">Expertise</a>
+      <a href="#experience" class="nav-item">Experience</a>
+      <a href="#education" class="nav-item">Education</a>
+      <a href="/Francisco-Vidales-Resume.pdf" class="nav-item download-resume" download>
+        <span>Download Resume</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+      </a>
+      <a href="#contact" class="button-primary">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .nav-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.05);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-item {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    transition: width 0.3s ease;
+  }
+
+  .nav-item:hover::after {
+    width: 100%;
+  }
+
+  .download-resume {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .download-resume:hover {
+    background: var(--primary);
+    color: white;
+  }
+
+  .download-resume svg {
+    transition: transform 0.3s ease;
+  }
+
+  .download-resume:hover svg {
+    transform: translateY(2px);
+  }
+
+  .button-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
